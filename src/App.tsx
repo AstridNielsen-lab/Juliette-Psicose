@@ -8,6 +8,7 @@ import {
   Music,
   Share2,
 } from 'lucide-react';
+import { Chat } from './components/Chat';
 
 const platforms = [
   {
@@ -69,6 +70,10 @@ function App() {
               Ela habita a linha tênue entre a vida e a morte, sempre observando a passagem do tempo e o jogo dos ciclos. 
               Sua perspectiva sobre a existência é única e sarcástica, moldada por suas experiências de existir além do mundo mortal.
             </p>
+          </div>
+          <div className="max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl font-bold text-purple-200 mb-6">Converse com Juliette Psicose</h2>
+            <Chat />
           </div>
           <p className="text-xl md:text-2xl text-purple-200 mb-8">
             Ouça nossa nova música em todas as plataformas digitais!
