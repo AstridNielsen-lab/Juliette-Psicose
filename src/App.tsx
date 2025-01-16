@@ -19,7 +19,7 @@ const platforms = [
   {
     name: 'Apple Music',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://music.apple.com/us/song/juliette-psicose-beyond-the-taste/1790326763'
+    url: 'https://music.apple.com/us/album/juliette-psicose-beyond-the-taste-single/1790326762'
   },
   {
     name: 'YouTube Music',
