@@ -14,17 +14,17 @@ const platforms = [
   {
     name: 'Spotify',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://open.spotify.com/search/Juliette%20Psicose%20Beyond%20the%20Taste'
+    url: 'https://open.spotify.com/intl-pt/album/6UEdbcGhYakpvx76KneSAQ?si=rFF3SUuSTLCei_g9YgjFRQ'
   },
   {
     name: 'Apple Music',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://music.apple.com/search?term=Juliette+Psicose+Beyond+the+Taste'
+    url: 'https://music.apple.com/us/song/juliette-psicose-beyond-the-taste/1790326763'
   },
   {
     name: 'YouTube Music',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://music.youtube.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
+    url: 'https://music.youtube.com/playlist?list=OLAK5uy_k_ZqTLoJlyIfA9zDJu455wLIpLcifwEfs'
   },
   {
     name: 'Amazon Music',
@@ -34,7 +34,7 @@ const platforms = [
   {
     name: 'Deezer',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://www.deezer.com/search/Juliette%20Psicose%20Beyond%20the%20Taste'
+    url: 'https://deezer.page.link/uJs7L6nWJk9nk5YP9'
   },
   {
     name: 'Tidal',
@@ -44,7 +44,7 @@ const platforms = [
   {
     name: 'TikTok',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://www.tiktok.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
+    url: 'https://www.tiktok.com/@radiotatuapefm/video/7362404077407456517'
   },
   {
     name: 'iMusica',
