@@ -36,25 +36,46 @@ export function Chat() {
     scrollToBottom();
   }, [messages]);
 
-  // Initialize speech synthesis
+  // Initialize speech synthesis with French female voice
   useEffect(() => {
     const initVoices = () => {
       const voices = window.speechSynthesis.getVoices();
-      // Try to find a Portuguese female voice
-      let voice = voices.find(v => v.lang.includes('pt') && v.name.toLowerCase().includes('female'));
-      // Fallback to any Portuguese voice
+      
+      // Priority order for voice selection:
+      // 1. Microsoft French female voice
+      // 2. Any French female voice
+      // 3. Any French voice
+      // 4. Any female voice
+      let voice = voices.find(v => 
+        v.name.toLowerCase().includes('microsoft') && 
+        v.name.toLowerCase().includes('french') && 
+        v.name.toLowerCase().includes('female')
+      );
+
       if (!voice) {
-        voice = voices.find(v => v.lang.includes('pt'));
+        voice = voices.find(v => 
+          v.lang.includes('fr') && 
+          v.name.toLowerCase().includes('female')
+        );
       }
-      // Fallback to any female voice
+
+      if (!voice) {
+        voice = voices.find(v => v.lang.includes('fr'));
+      }
+
       if (!voice) {
         voice = voices.find(v => v.name.toLowerCase().includes('female'));
       }
+
       // Final fallback to any available voice
       if (!voice && voices.length > 0) {
         voice = voices[0];
       }
+
       setSelectedVoice(voice || null);
+      
+      // Log available voices for debugging
+      console.log('Available voices:', voices.map(v => `${v.name} (${v.lang})`));
     };
 
     // Initial load
@@ -78,10 +99,10 @@ export function Chat() {
       utterance.voice = selectedVoice;
     }
 
-    // Set speech properties
-    utterance.lang = 'pt-BR';
-    utterance.rate = 1.0;
-    utterance.pitch = 1.0;
+    // Set speech properties for French accent
+    utterance.lang = 'fr-FR'; // Set language to French
+    utterance.rate = 0.9; // Slightly slower for better accent
+    utterance.pitch = 1.2; // Slightly higher pitch for feminine voice
     utterance.volume = 1.0;
 
     // Handle speech events
