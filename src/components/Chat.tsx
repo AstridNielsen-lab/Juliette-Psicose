@@ -39,23 +39,21 @@ export function Chat() {
 
   useEffect(() => {
     // Initialize speech synthesis and find Portuguese female voice
-    const voices = synth.getVoices();
-    const portugueseVoice = voices.find(voice => 
-      voice.lang.includes('pt') && voice.name.toLowerCase().includes('female')
-    );
-    
-    if (!portugueseVoice) {
-      setSpeechEnabled(false);
-    }
-
-    // Update voices when they're loaded
-    synth.onvoiceschanged = () => {
-      const updatedVoices = synth.getVoices();
-      const voice = updatedVoices.find(v => 
-        v.lang.includes('pt') && v.name.toLowerCase().includes('female')
+    const loadVoices = () => {
+      const voices = synth.getVoices();
+      const portugueseVoice = voices.find(voice => 
+        voice.lang.includes('pt') && voice.name.toLowerCase().includes('female')
       );
-      setSpeechEnabled(!!voice);
+      
+      setSpeechEnabled(!!portugueseVoice);
     };
+
+    loadVoices();
+    
+    // Some browsers need this event to load voices
+    if (synth.onvoiceschanged !== undefined) {
+      synth.onvoiceschanged = loadVoices;
+    }
 
     return () => {
       synth.cancel(); // Stop speaking when component unmounts
@@ -79,12 +77,15 @@ export function Chat() {
     }
     
     utterance.lang = 'pt-BR';
-    utterance.rate = 1;
-    utterance.pitch = 1;
+    utterance.rate = 0.9; // Slightly slower for better clarity
+    utterance.pitch = 1.1; // Slightly higher pitch for a more feminine voice
     
     utterance.onstart = () => setIsSpeaking(true);
     utterance.onend = () => setIsSpeaking(false);
-    utterance.onerror = () => setIsSpeaking(false);
+    utterance.onerror = () => {
+      setIsSpeaking(false);
+      setSpeechEnabled(false);
+    };
     
     synth.speak(utterance);
   };
@@ -119,6 +120,7 @@ export function Chat() {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
+    stopSpeaking(); // Stop any current speech
     const userMessage = input;
     setInput('');
     setMessages(prev => [...prev, { content: userMessage, isUser: true }]);
@@ -128,10 +130,8 @@ export function Chat() {
     setMessages(prev => [...prev, { content: response, isUser: false }]);
     setIsLoading(false);
     
-    // Speak the response
-    if (speechEnabled) {
-      speakText(response);
-    }
+    // Automatically speak the response
+    speakText(response);
   };
 
   return (
