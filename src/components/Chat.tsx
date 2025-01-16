@@ -25,9 +25,8 @@ export function Chat() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const [speechEnabled, setSpeechEnabled] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const synth = window.speechSynthesis;
+  const [selectedVoice, setSelectedVoice] = useState<SpeechSynthesisVoice | null>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -37,61 +36,68 @@ export function Chat() {
     scrollToBottom();
   }, [messages]);
 
+  // Initialize speech synthesis
   useEffect(() => {
-    // Initialize speech synthesis and find Portuguese female voice
-    const loadVoices = () => {
-      const voices = synth.getVoices();
-      const portugueseVoice = voices.find(voice => 
-        voice.lang.includes('pt') && voice.name.toLowerCase().includes('female')
-      );
-      
-      setSpeechEnabled(!!portugueseVoice);
+    const initVoices = () => {
+      const voices = window.speechSynthesis.getVoices();
+      // Try to find a Portuguese female voice
+      let voice = voices.find(v => v.lang.includes('pt') && v.name.toLowerCase().includes('female'));
+      // Fallback to any Portuguese voice
+      if (!voice) {
+        voice = voices.find(v => v.lang.includes('pt'));
+      }
+      // Fallback to any female voice
+      if (!voice) {
+        voice = voices.find(v => v.name.toLowerCase().includes('female'));
+      }
+      // Final fallback to any available voice
+      if (!voice && voices.length > 0) {
+        voice = voices[0];
+      }
+      setSelectedVoice(voice || null);
     };
 
-    loadVoices();
-    
-    // Some browsers need this event to load voices
-    if (synth.onvoiceschanged !== undefined) {
-      synth.onvoiceschanged = loadVoices;
-    }
+    // Initial load
+    initVoices();
+
+    // Handle dynamic voice loading
+    window.speechSynthesis.onvoiceschanged = initVoices;
 
     return () => {
-      synth.cancel(); // Stop speaking when component unmounts
+      window.speechSynthesis.cancel();
     };
   }, []);
 
   const speakText = (text: string) => {
-    if (!speechEnabled) return;
+    // Cancel any ongoing speech
+    window.speechSynthesis.cancel();
 
-    synth.cancel(); // Stop any current speech
     const utterance = new SpeechSynthesisUtterance(text);
     
-    // Find Portuguese female voice
-    const voices = synth.getVoices();
-    const portugueseVoice = voices.find(voice => 
-      voice.lang.includes('pt') && voice.name.toLowerCase().includes('female')
-    );
-    
-    if (portugueseVoice) {
-      utterance.voice = portugueseVoice;
+    if (selectedVoice) {
+      utterance.voice = selectedVoice;
     }
-    
+
+    // Set speech properties
     utterance.lang = 'pt-BR';
-    utterance.rate = 0.9; // Slightly slower for better clarity
-    utterance.pitch = 1.1; // Slightly higher pitch for a more feminine voice
-    
+    utterance.rate = 1.0;
+    utterance.pitch = 1.0;
+    utterance.volume = 1.0;
+
+    // Handle speech events
     utterance.onstart = () => setIsSpeaking(true);
     utterance.onend = () => setIsSpeaking(false);
-    utterance.onerror = () => {
+    utterance.onerror = (event) => {
+      console.error('Speech synthesis error:', event);
       setIsSpeaking(false);
-      setSpeechEnabled(false);
     };
-    
-    synth.speak(utterance);
+
+    // Start speaking
+    window.speechSynthesis.speak(utterance);
   };
 
   const stopSpeaking = () => {
-    synth.cancel();
+    window.speechSynthesis.cancel();
     setIsSpeaking(false);
   };
 
@@ -120,7 +126,7 @@ export function Chat() {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
-    stopSpeaking(); // Stop any current speech
+    stopSpeaking();
     const userMessage = input;
     setInput('');
     setMessages(prev => [...prev, { content: userMessage, isUser: true }]);
@@ -150,7 +156,7 @@ export function Chat() {
               }`}
             >
               {message.content}
-              {!message.isUser && speechEnabled && (
+              {!message.isUser && (
                 <button
                   onClick={() => isSpeaking ? stopSpeaking() : speakText(message.content)}
                   className="ml-2 text-purple-400 hover:text-purple-300 transition-colors"
