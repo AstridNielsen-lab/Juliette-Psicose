@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music2, ExternalLink } from 'lucide-react';
+import { Music2, ExternalLink, Phone } from 'lucide-react';
 import {
   Youtube,
   Facebook,
@@ -10,168 +10,150 @@ import {
 } from 'lucide-react';
 
 const platforms = [
-  // Example of how to add links:
-  // Replace 'YOUR_LINK_HERE' with the actual search or direct link for each platform
-  // Format: https://platform-domain.com/search?q=Juliette+Psicose+Beyond+the+Taste+-+Single
   {
     name: 'AMI',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add AMI search/direct link
+    url: '#' // Add your AMI link here
   },
   {
     name: 'Anghami',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Anghami search/direct link
+    url: 'https://www.anghami.com/search/Juliette+Psicose+Beyond+the+Taste+-+Single'
   },
   {
     name: 'Apple iTunes',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Apple iTunes search/direct link
+    url: 'https://music.apple.com/us/search?term=Juliette+Psicose+Beyond+the+Taste+-+Single'
   },
   {
     name: 'Audible Magic',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Audible Magic search/direct link
+    url: '#' // Add your Audible Magic link here
   },
   {
     name: 'AWA',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add AWA search/direct link
+    url: '#' // Add your AWA link here
   },
   {
     name: 'Boomplay',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Boomplay search/direct link
+    url: '#' // Add your Boomplay link here
   },
   {
     name: 'Deezer',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Deezer search/direct link
-  },
-  {
-    name: 'Facebook',
-    icon: <Facebook className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Facebook search/direct link
+    url: 'https://www.deezer.com/search/Juliette%20Psicose%20Beyond%20the%20Taste%20-%20Single'
   },
   {
     name: 'Hungama',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Hungama search/direct link
+    url: '#' // Add your Hungama link here
   },
   {
     name: 'iHeartRadio',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add iHeartRadio search/direct link
+    url: '#' // Add your iHeartRadio link here
   },
   {
     name: 'iMusica',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add iMusica search/direct link
+    url: '#' // Add your iMusica link here
   },
   {
     name: 'InProdicon',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add InProdicon search/direct link
+    url: '#' // Add your InProdicon link here
   },
   {
     name: 'KDigital',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add KDigital search/direct link
+    url: '#' // Add your KDigital link here
   },
   {
     name: 'KKBox',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add KKBox search/direct link
+    url: '#' // Add your KKBox link here
   },
   {
     name: 'Kuack',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Kuack search/direct link
+    url: '#' // Add your Kuack link here
   },
   {
     name: 'Lissen',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Lissen search/direct link
+    url: '#' // Add your Lissen link here
   },
   {
     name: 'NetEase Cloud Music',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add NetEase Cloud Music search/direct link
+    url: '#' // Add your NetEase link here
   },
   {
     name: 'Nuuday',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Nuuday search/direct link
+    url: '#' // Add your Nuuday link here
   },
   {
     name: 'Pandora',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Pandora search/direct link
+    url: '#' // Add your Pandora link here
   },
   {
     name: 'Peloton',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Peloton search/direct link
+    url: '#' // Add your Peloton link here
   },
   {
     name: 'Qobuz',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Qobuz search/direct link
+    url: '#' // Add your Qobuz link here
   },
   {
     name: 'Saavn',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Saavn search/direct link
+    url: '#' // Add your Saavn link here
   },
   {
     name: 'Slacker Radio',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Slacker Radio search/direct link
+    url: '#' // Add your Slacker Radio link here
   },
   {
     name: 'Spotify',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Spotify search/direct link
+    url: 'https://open.spotify.com/search/Juliette%20Psicose%20Beyond%20the%20Taste%20-%20Single'
   },
   {
     name: 'Tencent Music',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Tencent Music search/direct link
+    url: '#' // Add your Tencent Music link here
   },
   {
     name: 'Tidal',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Tidal search/direct link
+    url: '#' // Add your Tidal link here
   },
   {
     name: 'TikTok',
-    icon: <Share2 className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add TikTok search/direct link
+    icon: <Music className="w-8 h-8" />,
+    url: 'https://www.tiktok.com/search?q=Juliette+Psicose+Beyond+the+Taste+-+Single'
   },
   {
     name: 'Trebel',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Trebel search/direct link
+    url: '#' // Add your Trebel link here
   },
   {
     name: 'Tuned Global',
     icon: <Music className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add Tuned Global search/direct link
+    url: '#' // Add your Tuned Global link here
   },
   {
     name: 'YouTube Music',
-    icon: <Youtube className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add YouTube Music search/direct link
-  },
-  {
-    name: 'YouTube CMS',
-    icon: <Youtube className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add YouTube CMS search/direct link
-  },
-  {
-    name: 'YouTube Content ID',
-    icon: <Youtube className="w-8 h-8" />,
-    url: 'YOUR_LINK_HERE' // Add YouTube Content ID search/direct link
+    icon: <Music className="w-8 h-8" />,
+    url: 'https://music.youtube.com/search?q=Juliette+Psicose+Beyond+the+Taste+-+Single'
   }
 ];
 
@@ -229,23 +211,59 @@ function App() {
       {/* Footer */}
       <footer className="bg-black/30 backdrop-blur-sm py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-center gap-6 mb-8">
-            <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
-              <Facebook className="w-6 h-6" />
-            </a>
-            <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
-              <Instagram className="w-6 h-6" />
-            </a>
-            <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
-              <Twitter className="w-6 h-6" />
-            </a>
-            <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
-              <Youtube className="w-6 h-6" />
-            </a>
-          </div>
-          <div className="text-center text-gray-400 text-sm">
-            <p>© 2024 Juliette Psicose. Todos os direitos reservados.</p>
-            <p className="mt-2">Contato: info@juliettepsicose.com</p>
+          <div className="flex flex-col items-center gap-8">
+            <div className="flex justify-center gap-6">
+              <a 
+                href="https://www.facebook.com/Juliette.Psicose" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-purple-400 hover:text-purple-300 transition-colors"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
+                <Youtube className="w-6 h-6" />
+              </a>
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-purple-200">
+              <a 
+                href="https://wa.me/5511970603441" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-purple-300 transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span>(11) 97060-3441</span>
+              </a>
+              <span className="hidden md:inline">•</span>
+              <a 
+                href="https://www.amazon.com.br/Juliette-Psicose/dp/B0CLKWDQNJ" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-purple-300 transition-colors"
+              >
+                Amazon Kindle
+              </a>
+              <span className="hidden md:inline">•</span>
+              <a 
+                href="https://likelook.wixsite.com/solutions" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-purple-300 transition-colors"
+              >
+                Like Look Solutions
+              </a>
+            </div>
+            <div className="text-center text-gray-400 text-sm">
+              <p>© 2024 Juliette Psicose. Todos os direitos reservados.</p>
+              <p className="mt-2">Criado por Julio Campos Machado</p>
+            </div>
           </div>
         </div>
       </footer>
