@@ -11,14 +11,9 @@ import {
 
 const platforms = [
   {
-    name: 'AMI',
+    name: 'Spotify',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://www.ami.tv/search?q=Juliette+Psicose+Beyond+the+Taste'
-  },
-  {
-    name: 'Anghami',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://play.anghami.com/search/Juliette%20Psicose%20Beyond%20the%20Taste'
+    url: 'https://open.spotify.com/search/Juliette%20Psicose%20Beyond%20the%20Taste'
   },
   {
     name: 'Apple Music',
@@ -26,109 +21,19 @@ const platforms = [
     url: 'https://music.apple.com/search?term=Juliette+Psicose+Beyond+the+Taste'
   },
   {
-    name: 'Audible Magic',
+    name: 'YouTube Music',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://www.audiblemagic.com/search/?q=Juliette+Psicose+Beyond+the+Taste'
+    url: 'https://music.youtube.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
   },
   {
-    name: 'AWA',
+    name: 'Amazon Music',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://awa.fm/search/Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Boomplay',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.boomplay.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
+    url: 'https://music.amazon.com.br/search/Juliette%20Psicose%20Beyond%20the%20Taste'
   },
   {
     name: 'Deezer',
     icon: <Music className="w-8 h-8" />,
     url: 'https://www.deezer.com/search/Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Hungama',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.hungama.com/search/Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'iHeartRadio',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.iheart.com/search/?q=Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'iMusica',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.imusica.com.br/busca/Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'InProdicon',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.inprodicon.com/search?q=Juliette+Psicose+Beyond+the+Taste'
-  },
-  {
-    name: 'KDigital',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.kdigital.com/search?q=Juliette+Psicose+Beyond+the+Taste'
-  },
-  {
-    name: 'KKBox',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.kkbox.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Kuack',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.kuack.com/search?q=Juliette+Psicose+Beyond+the+Taste'
-  },
-  {
-    name: 'Lissen',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.lissen.com/search?q=Juliette+Psicose+Beyond+the+Taste'
-  },
-  {
-    name: 'NetEase Cloud Music',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://music.163.com/#/search/m/?s=Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Nuuday',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.nuuday.com/search?q=Juliette+Psicose+Beyond+the+Taste'
-  },
-  {
-    name: 'Pandora',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.pandora.com/search/Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Peloton',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://members.onepeloton.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Qobuz',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.qobuz.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Saavn',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.jiosaavn.com/search/Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Slacker Radio',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.livexlive.com/search?term=Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Spotify',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://open.spotify.com/search/Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Tencent Music',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://y.qq.com/portal/search.html#page=1&searchid=1&remoteplace=txt.yqq.top&t=song&w=Juliette%20Psicose%20Beyond%20the%20Taste'
   },
   {
     name: 'Tidal',
@@ -141,19 +46,9 @@ const platforms = [
     url: 'https://www.tiktok.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
   },
   {
-    name: 'Trebel',
+    name: 'iMusica',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://home.trebel.io/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'Tuned Global',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://www.tunedglobal.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
-  },
-  {
-    name: 'YouTube Music',
-    icon: <Music className="w-8 h-8" />,
-    url: 'https://music.youtube.com/search?q=Juliette%20Psicose%20Beyond%20the%20Taste'
+    url: 'https://www.imusica.com.br/busca/Juliette%20Psicose%20Beyond%20the%20Taste'
   }
 ];
 
