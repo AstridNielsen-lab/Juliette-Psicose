@@ -129,13 +129,13 @@ function App() {
               >
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <a href="https://www.instagram.com/radiotatuapefm" className="text-purple-400 hover:text-purple-300 transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <a href="https://x.com/JulioScouter" className="text-purple-400 hover:text-purple-300 transition-colors">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <a href="https://youtube.com/playlist?list=PLkm4QB9CKklpa5tej_S5yL-VM59O7mshE&si=Keaoeovm4bnqI0aq" className="text-purple-400 hover:text-purple-300 transition-colors">
                 <Youtube className="w-6 h-6" />
               </a>
             </div>
