@@ -47,9 +47,9 @@ const platforms = [
     url: 'https://www.tiktok.com/@radiotatuapefm/video/7362404077407456517'
   },
   {
-    name: 'iMusica',
+    name: 'Claro Música',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://www.imusica.com.br/busca/Juliette%20Psicose%20Beyond%20the%20Taste'
+    url: 'https://www.claromusica.com/album/60933824/BR'
   }
 ];
 
