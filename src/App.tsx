@@ -60,7 +60,7 @@ function App() {
       <header className="pt-16 pb-24 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <Music2 className="w-20 h-20 mx-auto mb-8 text-purple-400" />
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-10 font-metal">
+          <h2> className="text-4xl md:text-6xl font-bold text-white mb-10 font-metal">
             Juliette Psicose Beyond the Taste
           </h2>
           <div className="max-w-3xl mx-auto mb-12 p-6 bg-black/30 backdrop-blur-sm rounded-2xl border border-purple-500/20 hover:border-purple-500/30 transition-colors">
