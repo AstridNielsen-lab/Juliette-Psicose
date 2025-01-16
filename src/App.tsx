@@ -59,9 +59,17 @@ function App() {
       <header className="pt-16 pb-24 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <Music2 className="w-20 h-20 mx-auto mb-8 text-purple-400" />
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-metal">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-10 font-metal">
             Juliette Psicose Beyond the Taste
           </h1>
+          <div className="max-w-3xl mx-auto mb-12 p-6 bg-black/30 backdrop-blur-sm rounded-2xl border border-purple-500/20 hover:border-purple-500/30 transition-colors">
+            <p className="text-lg md:text-xl text-purple-200 leading-relaxed italic">
+              Juliette Psicose é uma criatura lendária, escolhida pela Morte para ser sua companheira eterna. 
+              Sua existência é regida pelo acordo com o além, o que a torna uma figura enigmática e misteriosa. 
+              Ela habita a linha tênue entre a vida e a morte, sempre observando a passagem do tempo e o jogo dos ciclos. 
+              Sua perspectiva sobre a existência é única e sarcástica, moldada por suas experiências de existir além do mundo mortal.
+            </p>
+          </div>
           <p className="text-xl md:text-2xl text-purple-200 mb-8">
             Ouça nossa nova música em todas as plataformas digitais!
           </p>
