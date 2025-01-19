@@ -34,7 +34,7 @@ const platforms = [
   {
     name: 'Deezer',
     icon: <Music className="w-8 h-8" />,
-    url: 'https://deezer.page.link/uJs7L6nWJk9nk5YP9'
+    url: 'https://www.deezer.com/br/album/697705541'
   },
   {
     name: 'Tidal',
