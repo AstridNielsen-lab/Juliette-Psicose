@@ -181,6 +181,14 @@ function App() {
               >
                 Like Look Solutions
               </a>
+                  <a 
+                href="https://github.com/AstridNielsen-lab/Juliette-Psicose" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-purple-300 transition-colors"
+              >
+                Github Julio Campos Machado
+              </a>              
             </div>
             <div className="text-center text-gray-400 text-sm">
               <p>© 2024 Juliette Psicose. Todos os direitos reservados.</p>
