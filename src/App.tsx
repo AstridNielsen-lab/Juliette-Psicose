@@ -181,7 +181,7 @@ function App() {
               >
                 Like Look Solutions
               </a>
-            </br>
+            <br>
                   <a 
                 href="https://github.com/AstridNielsen-lab/Juliette-Psicose" 
                 target="_blank" 
