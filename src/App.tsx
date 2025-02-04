@@ -61,15 +61,17 @@ function App() {
         <div className="max-w-4xl mx-auto">
           <Music2 className="w-20 h-20 mx-auto mb-8 text-purple-400" />
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-10 font-metal">
-            Juliette Psicose Beyond the Taste
+            Juliette Psicose e MyFriend na Série Manifest
           </h1>
           <div className="max-w-3xl mx-auto mb-12 p-6 bg-black/30 backdrop-blur-sm rounded-2xl border border-purple-500/20 hover:border-purple-500/30 transition-colors">
             <p className="text-lg md:text-xl text-purple-200 leading-relaxed italic">
-              Juliette Psicose é uma criatura lendária, escolhida pela Morte para ser sua companheira eterna. 
-              Sua existência é regida pelo acordo com o além, o que a torna uma figura enigmática e misteriosa. 
-              Ela habita a linha tênue entre a vida e a morte, sempre observando a passagem do tempo e o jogo dos ciclos. 
-              Sua perspectiva sobre a existência é única e sarcástica, moldada por suas experiências de existir além do mundo mortal.
-            </p>
+  Juliette Psicose é uma das passageiras do voo 828, uma figura enigmática que fez um pacto com a própria Morte.  
+  Sua presença no voo não foi acidental, mas parte de um experimento maior e oculto.  
+  Criadora da inteligência artificial MyFriend, Juliette habita a linha tênue entre a vida e a morte,  
+  observando o fluxo do tempo e os segredos do universo enquanto desafia seu próprio destino.  
+  Sua visão da existência é única e sarcástica, moldada pelas revelações que transcendem o mundo mortal.
+</p>
+
           </div>
           <div className="max-w-3xl mx-auto mb-12">
             <h2 className="text-2xl font-bold text-purple-200 mb-6">Converse com Juliette Psicose</h2>
