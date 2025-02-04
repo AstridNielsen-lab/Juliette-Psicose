@@ -130,74 +130,110 @@ function App() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-black/30 backdrop-blur-sm py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col items-center gap-8">
-            <div className="flex justify-center gap-6">
-              <a 
-                href="https://www.facebook.com/Juliette.Psicose" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-purple-400 hover:text-purple-300 transition-colors"
-              >
-                <Facebook className="w-6 h-6" />
-              </a>
-              <a href="https://www.instagram.com/radiotatuapefm" className="text-purple-400 hover:text-purple-300 transition-colors">
-                <Instagram className="w-6 h-6" />
-              </a>
-              <a href="https://x.com/JulioScouter" className="text-purple-400 hover:text-purple-300 transition-colors">
-                <Twitter className="w-6 h-6" />
-              </a>
-              <a href="https://youtube.com/playlist?list=PLkm4QB9CKklpa5tej_S5yL-VM59O7mshE&si=Keaoeovm4bnqI0aq" className="text-purple-400 hover:text-purple-300 transition-colors">
-                <Youtube className="w-6 h-6" />
-              </a>
-            </div>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-purple-200">
-              <a 
-                href="https://wa.me/5511970603441" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-purple-300 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>(11) 97060-3441</span>
-              </a>
-              <span className="hidden md:inline">•</span>
-              <a 
-                href="https://www.amazon.com.br/Juliette-Psicose/dp/B0CLKWDQNJ" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition-colors"
-              >
-                Amazon Kindle
-              </a>
-              <span className="hidden md:inline">•</span>
-              <a 
-                href="https://likelook.wixsite.com/solutions" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition-colors"
-              >
-                Like Look Solutions
-              </a>
-            <br>
-                  <a 
-                href="https://github.com/AstridNielsen-lab/Juliette-Psicose" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition-colors"
-              >
-                Github Julio Campos Machado
-              </a>              
-            </div>
-            <div className="text-center text-gray-400 text-sm">
-              <p>© 2024 Juliette Psicose. Todos os direitos reservados.</p>
-              <p className="mt-2">Criado por Julio Campos Machado</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+     {/* Footer */}
+<footer className="bg-black/30 backdrop-blur-sm py-12">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="flex flex-col items-center gap-8">
+      
+      {/* Redes Sociais */}
+      <div className="flex justify-center gap-6">
+        <a 
+          href="https://www.facebook.com/Juliette.Psicose" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          aria-label="Facebook"
+          className="text-purple-400 hover:text-purple-300 transition-colors"
+        >
+          <Facebook className="w-6 h-6" />
+        </a>
+        <a 
+          href="https://www.instagram.com/radiotatuapefm" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          aria-label="Instagram"
+          className="text-purple-400 hover:text-purple-300 transition-colors"
+        >
+          <Instagram className="w-6 h-6" />
+        </a>
+        <a 
+          href="https://x.com/JulioScouter" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          aria-label="Twitter"
+          className="text-purple-400 hover:text-purple-300 transition-colors"
+        >
+          <Twitter className="w-6 h-6" />
+        </a>
+        <a 
+          href="https://youtube.com/playlist?list=PLkm4QB9CKklpa5tej_S5yL-VM59O7mshE&si=Keaoeovm4bnqI0aq" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          aria-label="YouTube"
+          className="text-purple-400 hover:text-purple-300 transition-colors"
+        >
+          <Youtube className="w-6 h-6" />
+        </a>
+      </div>
+
+      {/* Links úteis */}
+      <div className="flex flex-wrap justify-center gap-4 text-purple-200 text-sm md:text-base">
+        <a 
+          href="https://wa.me/5511970603441" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 hover:text-purple-300 transition-colors"
+        >
+          <Phone className="w-4 h-4" />
+          <span>(11) 97060-3441</span>
+        </a>
+        <span className="hidden md:inline">•</span>
+        <a 
+          href="https://www.amazon.com.br/Juliette-Psicose/dp/B0CLKWDQNJ" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hover:text-purple-300 transition-colors"
+        >
+          Amazon Kindle
+        </a>
+        <span className="hidden md:inline">•</span>
+        <a 
+          href="https://likelook.wixsite.com/solutions" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hover:text-purple-300 transition-colors"
+        >
+          Like Look Solutions
+        </a>
+        <span className="hidden md:inline">•</span>
+        <a 
+          href="https://github.com/AstridNielsen-lab/Juliette-Psicose" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hover:text-purple-300 transition-colors"
+        >
+          GitHub Julio Campos Machado
+        </a>
+        <span className="hidden md:inline">•</span>
+        <a 
+          href="https://www.linkedin.com/in/juliocamposmachado" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hover:text-purple-300 transition-colors"
+        >
+          LinkedIn Julio Campos Machado
+        </a>
+      </div>
+
+      {/* Copyright */}
+      <div className="text-center text-gray-400 text-sm">
+        <p>© 2024 Juliette Psicose. Todos os direitos reservados.</p>
+        <p className="mt-2">Criado por <span className="text-purple-300">Julio Campos Machado</span></p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
