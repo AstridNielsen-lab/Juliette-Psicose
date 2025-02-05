@@ -206,12 +206,12 @@ function App() {
         </a>
         <span className="hidden md:inline">•</span>
         <a 
-          href="https://github.com/AstridNielsen-lab/Juliette-Psicose" 
+          href="https://like-look-tv.vercel.app" 
           target="_blank" 
           rel="noopener noreferrer"
           className="hover:text-purple-300 transition-colors"
         >
-          GitHub Julio Campos Machado
+          Julio Campos Machado Crítico de Cinema
         </a>
         <span className="hidden md:inline">•</span>
         <a 
