@@ -232,7 +232,7 @@ function App() {
         >
           Tunelamento Quântico
         </a>
-      </div>      
+         
 
       {/* Copyright */}
       <div className="text-center text-gray-400 text-sm">
