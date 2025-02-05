@@ -224,6 +224,16 @@ function App() {
         </a>
       </div>
 
+       <a 
+          href="https://radiotatuapefm.pythonanywhere.com/simulador-quantico" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hover:text-purple-300 transition-colors"
+        >
+          Tunelamento Quântico
+        </a>
+      </div>      
+
       {/* Copyright */}
       <div className="text-center text-gray-400 text-sm">
         <p>© 2024 Juliette Psicose. Todos os direitos reservados.</p>
